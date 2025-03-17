@@ -26,5 +26,5 @@ liff.getProfile()
 })
 .catch(error => {
   console.error('Error getting user profile:', error);
-  // エラーハンドリング: ユーザーには「情報の取得に失敗しました」等のメッセージを表示
+  // エラーハンドリング: ユーザーには「情報の取得に失敗しました」等のメッセージを表示 aa
 });
