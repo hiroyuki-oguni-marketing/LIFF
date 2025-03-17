@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
   // LIFF アプリの初期化
-  liff.init({ liffId: '2007062380-kJ4LXXnz' })
+  window.liff.init({ liffId: '2007062380-kJ4LXXnz' })
     .then(() => {
       console.log('LIFF initialized successfully.');
       // 初期化後の処理（UI 表示の切り替えなど）を実装
@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
     });
 
   // ユーザー情報取得
-  liff.getProfile()
+  window.liff.getProfile()
     .then(profile => {
       console.log('User Profile:', profile);
       const userId = profile.userId;
