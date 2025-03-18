@@ -1,4 +1,10 @@
 window.addEventListener('load', function() {
+  setTimeout(() => {
+    liffInit()
+  }, 1000);
+});
+
+const liffInit = ()=>{
   alert('読み込み時');
   // LIFF アプリの初期化
   window.liff.init({ liffId: '2007062380-kJ4LXXnz' })
@@ -30,4 +36,4 @@ window.addEventListener('load', function() {
     .catch(error => {
       console.error('Error getting user profile:', error);
     });
-});
+}
