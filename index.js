@@ -4,6 +4,7 @@ window.addEventListener('load', async function() {
   alert("ログイン状態：",await liff.isLoggedIn())
 });
 liff.ready.then(() => {
+  alert("liff.ready処理開始")
   const profileData = liffGetProfile()
   console.log(profileData);
   setProfileData(profileData)
