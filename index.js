@@ -1,7 +1,7 @@
 window.addEventListener('load', async function() {
   const liffId = '2007062380-kJ4LXXnz'
   const initRes = await liffInit(liffId)
-  alert("ログイン状態：",liff.isLoggedIn())
+  alert("ログイン状態：",await liff.isLoggedIn())
 });
 liff.ready.then(() => {
   const profileData = liffGetProfile()
