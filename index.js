@@ -1,15 +1,17 @@
 window.addEventListener('load', async function() {
-  const initRes = await liffInit()
+  const liffId = '2007062380-kJ4LXXnz'
+  const initRes = await liffInit(liffId)
   console.log(initRes);
-  const profileData = await liffGetProfile()
+});
+liff.ready.then(() => {
+  const profileData = liffGetProfile()
   console.log(profileData);
-  await setProfileData(profileData)
-  
+  setProfileData(profileData)
 });
 
-const liffInit = async ()=>{
+const liffInit = async (liffId)=>{
   // LIFF アプリの初期化
-  liff.init({ liffId: '2007062380-kJ4LXXnz' })
+  liff.init({liffId})
     .then((response) => {
       // 初期化後の処理（UI 表示の切り替えなど）を実装
       return response
@@ -20,7 +22,7 @@ const liffInit = async ()=>{
     });
     alert('init処理が流れてる');
 }
-const liffGetProfile = async ()=>{
+const liffGetProfile = ()=>{
   // ユーザー情報取得
   liff.getProfile()
     .then(profile => {
@@ -31,7 +33,7 @@ const liffGetProfile = async ()=>{
     });
 }
 
-const setProfileData = async (profileData) => {
+const setProfileData = (profileData) => {
   console.log(profileData);
   alert(profileData)
 }
