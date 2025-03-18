@@ -1,11 +1,14 @@
 window.addEventListener('load', function() {
-  setTimeout(() => {
-    liffInit()
-  }, 1000);
+  liffInit()
 });
 
 const liffInit = ()=>{
   alert('読み込み時');
+  console.log(window);
+  console.log(window.liff);
+  console.log(liff);
+  
+  
   // LIFF アプリの初期化
   liff.init({ liffId: '2007062380-kJ4LXXnz' })
     .then(() => {
