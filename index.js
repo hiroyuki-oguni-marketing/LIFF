@@ -1,7 +1,7 @@
 window.addEventListener('load', async function() {
   const liffId = '2007062380-kJ4LXXnz'
   const initRes = await liffInit(liffId)
-  console.log(initRes);
+  alert("ログイン状態：",liff.isLoggedIn())
 });
 liff.ready.then(() => {
   const profileData = liffGetProfile()
@@ -14,13 +14,12 @@ const liffInit = async (liffId)=>{
   liff.init({liffId})
     .then((response) => {
       // 初期化後の処理（UI 表示の切り替えなど）を実装
-      return response
+      alert('init成功');
     })
     .catch((error) => {
       // エラーハンドリング
-      return error
+      alert('失敗');
     });
-    alert('init処理が流れてる');
 }
 const liffGetProfile = ()=>{
   // ユーザー情報取得
