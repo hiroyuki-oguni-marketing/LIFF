@@ -1,57 +1,37 @@
-window.addEventListener('load', async function() {
-  const liffId = '2007062380-kJ4LXXnz'
-  const initRes = await liffInit(liffId)
-  alert("ログイン状態：",await liff.isLoggedIn())
-});
-liff.ready.then(() => {
-  alert("liff.ready処理開始")
-  const profileData = liffGetProfile()
-  console.log(profileData);
-  setProfileData(profileData)
+window.addEventListener('load', async () => {
+  const liffId = '2007062380-kJ4LXXnz';
+
+  try {
+    // LIFF の初期化を待つ
+    await liff.init({ liffId });
+    alert("LIFF initialized successfully.");
+  } catch (err) {
+    console.error("Error initializing LIFF:", err);
+    alert("Error initializing LIFF.");
+    // 初期化失敗ならここで処理を中断
+    return;
+  }
+
+  // 初期化完了後、ログイン状態を確認
+  const loggedIn = liff.isLoggedIn(); // これは同期関数です
+  alert("ログイン状態: " + loggedIn);
+
+  try {
+    // ユーザー情報取得
+    const profile = await liff.getProfile();
+    console.log("User Profile:", profile);
+    setProfileData(profile);
+  } catch (err) {
+    console.error("Error getting user profile:", err);
+    alert("Error getting user profile.");
+  }
 });
 
-const liffInit = async (liffId)=>{
-  // LIFF アプリの初期化
-  liff.init({liffId})
-    .then((response) => {
-      // 初期化後の処理（UI 表示の切り替えなど）を実装
-      alert('init成功');
-    })
-    .catch((error) => {
-      // エラーハンドリング
-      alert('失敗');
-    });
+// 取得したプロファイル情報を画面に表示する関数
+function setProfileData(profile) {
+  const userInfoEl = document.getElementById('user-info');
+  if (userInfoEl) {
+    userInfoEl.innerText =
+      `UserId: ${profile.userId}\nDisplayName: ${profile.displayName}\nStatus: ${profile.statusMessage}`;
+  }
 }
-const liffGetProfile = ()=>{
-  // ユーザー情報取得
-  liff.getProfile()
-    .then(profile => {
-      return profile
-    })
-    .catch(error => {
-      return error
-    });
-}
-
-const setProfileData = (profileData) => {
-  console.log(profileData);
-  alert(profileData)
-}
-// const liffGetProfile = ()=>{
-//   // ユーザー情報取得
-//   liff.getProfile()
-//     .then(profile => {
-//       console.log('User Profile:', profile);
-//       alert('User Profile:', profile);
-//       const userId = profile.userId;
-//       const displayName = profile.displayName;
-//       const pictureUrl = profile.pictureUrl;
-//       const statusMessage = profile.statusMessage;
-      
-//       document.getElementById('user-info').innerText = 
-//         `UserId: ${userId}\nDisplayName: ${displayName}\nStatus: ${statusMessage}`;
-//     })
-//     .catch(error => {
-//       console.error('Error getting user profile:', error);
-//     });
-// }
