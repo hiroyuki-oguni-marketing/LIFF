@@ -25,3 +25,16 @@
 
 ## 覚え書きとメモ
 https://docs.google.com/spreadsheets/d/12_1oDzAibiqi0chSzbYMoRAqnnOXTSlvkIs7Vis03s0/edit?gid=0#gid=0
+
+
+## 現状の実装
+- ユーザーがLINEのリッチメニューからリンクをクリックして、LIFF APP 側の画面に遷移後にLINE ID、表示名、メールアドレス、プロフィール画像が取得できる。（取得できるのはこの４つのみ）
+- テストサイトの為、開発モードで運用しており、Admin管理者が招待し、ホワイトリストに入れたアカウントのみ、liffアプリとして正しく稼働する。（ホワイトリストする or Admin権限のアカウントを追加する場合は大国にご連絡ください）
+  - LINE DEVELOPERSにアカウント作成
+  - ログインチャンネルを設定
+  - MessageingAPIチャンネルを設定
+  - CDN方式でフロント側にログインユーザーデータを表示
+    1. init関数で初期化
+    1. getProfile関数で取得
+    1. HTML側に取得データを表示
+  - 参考:LIFF APIリファレンス https://developers.line.biz/ja/reference/liff/
