@@ -37,5 +37,5 @@ https://docs.google.com/spreadsheets/d/12_1oDzAibiqi0chSzbYMoRAqnnOXTSlvkIs7Vis0
     1. init関数で初期化
     1. getProfile関数で取得
     1. HTML側に取得データを表示
-    1. ec-cube側のUIにすぐ切り替わる想定なので現状jsのフレームワークを入れると共存させるのにコストが掛かりそうなのでCDN方式を取っている
+  - ※ec-cube側のUIにすぐ切り替わる想定なので現状jsのフレームワークを入れると共存させるのにコストが掛かりそうなのでCDN方式を取っている
   - 参考:LIFF APIリファレンス https://developers.line.biz/ja/reference/liff/
