@@ -1,4 +1,4 @@
-# liff-ecCube
+# liffとecCube連携
 
 ## 全体のフロー
 - ユーザーがLINEのリッチメニューからリンクをクリック
