@@ -32,6 +32,6 @@ function setProfileData(profile) {
   const userInfoEl = document.getElementById('user-info');
   if (userInfoEl) {
     userInfoEl.innerText =
-      `UserId: ${profile.userId}\nDisplayName: ${profile.displayName}\nStatus: ${profile.statusMessage}`;
+      `showAllData: ${profile}`;
   }
 }
