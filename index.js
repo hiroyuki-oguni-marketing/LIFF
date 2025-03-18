@@ -12,6 +12,7 @@ window.addEventListener('load', function() {
       alert('init失敗');
       // エラーハンドリング
     });
+    alert('init処理が流れてる');
 
   // ユーザー情報取得
   liff.getProfile()
