@@ -35,6 +35,6 @@ function setProfileData(profile) {
   const userInfoEl = document.getElementById('user-info');
   if (userInfoEl) {
     userInfoEl.innerText =
-      `showAllData: ${profile}`;
+      `取得できるのは以下のデータがすべて\nUserId: ${profile.userId}\nDisplayName: ${profile.displayName}\nStatus: ${profile.statusMessage}\npictureUrl: ${profile.pictureUrl}`;
   }
 }
