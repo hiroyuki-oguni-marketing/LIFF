@@ -15,6 +15,9 @@ window.addEventListener('load', async () => {
   // 初期化完了後、ログイン状態を確認
   const loggedIn = liff.isLoggedIn(); // これは同期関数です
   alert("ログイン状態: " + loggedIn);
+  if(!loggedIn) {
+    liff.closeWindow();
+  }
 
   try {
     // ユーザー情報取得
