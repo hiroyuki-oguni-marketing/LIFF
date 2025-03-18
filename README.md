@@ -22,3 +22,6 @@
 - シームレスなユーザー体験の提供
   - ログインまたはサインアップ完了後、EC‑CUBE側はユーザーの購入履歴、会員専用ダッシュボード、カート機能などにリダイレクトします。
   - UI上では、LINEの表示名やプロフィール画像を活用することで、違和感なく利用者情報を連携・反映できます。
+
+## 覚え書きとメモ
+https://docs.google.com/spreadsheets/d/12_1oDzAibiqi0chSzbYMoRAqnnOXTSlvkIs7Vis03s0/edit?gid=0#gid=0
