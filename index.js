@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
 const liffInit = ()=>{
   alert('読み込み時');
   // LIFF アプリの初期化
-  window.liff.init({ liffId: '2007062380-kJ4LXXnz' })
+  liff.init({ liffId: '2007062380-kJ4LXXnz' })
     .then(() => {
       console.log('LIFF initialized successfully.');
       alert('init成功');
