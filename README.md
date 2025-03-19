@@ -39,3 +39,7 @@ https://docs.google.com/spreadsheets/d/12_1oDzAibiqi0chSzbYMoRAqnnOXTSlvkIs7Vis0
     1. HTML側に取得データを表示
   - ※ec-cube側のUIにすぐ切り替わる想定なので現状jsのフレームワークを入れると共存させるのにコストが掛かりそうなのでCDN方式を取っている
   - 参考:LIFF APIリファレンス https://developers.line.biz/ja/reference/liff/
+
+#### MEMO📝
+1. LINEデベロッパーサイトでLIFFの設定、
+1. LINEオフィシャルアカウントマネージャー側で友達追加用のアカウント作成と、リッチメニューの設定=>LINEデベロッパーサイト側で作成したLIFFアプリのURLをリッチメニュー側のボタンに設定して、LINE上でLIFFアプリを起動している。
